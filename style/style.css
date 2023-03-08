@@ -1,18 +1,26 @@
-@import url("https://fonts.cdnfonts.com/css/skarpa");
+:root {
+  --white: #fff;
+  --red: red;
+  --grey: grey;
+  --black: black;
+}
 * {
   box-sizing: border-box;
   margin: 0rem;
   padding: 0rem;
   text-decoration: none;
   font-family: myFirstFont;
+  color: var(--white);
 }
 @font-face {
   font-family: myFirstFont;
   src: url("../font/NetflixSansRegular.ttf");
 }
-
-:root {
-  --red: red;
+.overlay {
+  position: fixed;
+  top: 0;
+  background-color: linear-gradient(0deg, 50%, rgba(102, 230, 17, 1)),
+    radial-gradient(50% 100%, 0, rgba(172, 241, 10, 1) 100%);
 }
 header {
   height: 100vh;
@@ -28,7 +36,8 @@ header {
   /* background-color: black; */
 
   background-blend-mode: lighten;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 4rem;
+  border-bottom: 10px solid var(--grey);
 }
 nav {
   display: flex;
@@ -42,7 +51,7 @@ nav img {
 nav a {
   background-color: var(--red);
   color: #fff;
-  padding: 0rem 1rem;
+  padding: 0rem 1.5rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -52,15 +61,14 @@ nav a {
   justify-content: center;
   /* background-color: linear-gradient(0deg, transparent 50%, rgba(0, 0, 0, 0.7)),
     radial-gradient(50% 100%, transparent 0, rgba(0, 0, 0, 0.7) 100%); */
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .heroContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 40%;
-  border: 1px solid red;
+  display: grid;
+  place-items: center;
+  width: 50%;
+  margin-top: 10rem;
+  /* border: 1px solid red; */
 }
 .heroContent h1,
 h2,
@@ -68,9 +76,7 @@ p {
   color: white;
 }
 .heroContent h1 {
-  /* margin-top: 8rem; */
-  font-size: 4rem;
-  /* width: 40%;  */
+  font-size: 3.2rem;
   text-align: center;
 }
 .heroContent h2 {
@@ -87,28 +93,74 @@ p {
   /* width: 100%; */
   margin: 1.5rem auto;
   text-align: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }
 .heroContent form input[type="email"],
 button {
-  padding: 1.6rem 7rem 1.6rem 0.2rem;
+  padding: 1rem 2rem;
 }
 input {
   border: none;
 }
-/* input:focus {
-  border: 5px solid blue;
-} */
+input:focus {
+  outline: 1px solid var(--red);
+}
 
 .heroContent form button {
-  padding: 1.4rem 7rem auto 0.2rem;
-  /* width: 23%; */
+  padding: 1rem;
   background-color: var(--red);
   border: none;
   color: #fff;
-  font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.5rem;
   white-space: nowrap;
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+section {
+  background-color: var(--black);
+  padding: 1rem 3rem 3rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 10px solid var(--grey);
+}
+section div h3 {
+  font-size: 3.2rem;
+}
+section div p {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+#section3 .sectionDetails h3 {
+  width: 50%;
+}
+.faqSection {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.faq {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+details {
+  width: 100%;
+  border-bottom: 5px solid var(--black);
+}
+summary {
+  font-size: 2rem;
+  padding: 1.5rem;
+  background-color: var(--grey);
+}
+details p {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--grey);
+}
+footer {
+  padding: 3rem 4rem;
+  background-color: var(--black);
 }
