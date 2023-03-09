@@ -1,0 +1,120 @@
+:root {
+  --white: #fff;
+  --red: red;
+  --grey: grey;
+  --black: black;
+}
+* {
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+  text-decoration: none;
+  font-family: myFirstFont;
+  color: var(--white);
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url("../font/NetflixSansRegular.ttf");
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  background-color: linear-gradient(0deg, 50%, rgba(102, 230, 17, 1)),
+    radial-gradient(50% 100%, 0, rgba(172, 241, 10, 1) 100%);
+}
+header {
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat no-repeat;
+  height: 100vh;
+  /* overlay style */
+  /* background-color: linear-gradient(0deg, transparent 50%, rgba(0, 0, 0, 0.7)),
+    radial-gradient(50% 100%, transparent 0, rgba(0, 0, 0, 0.7) 100%); */
+  /* backdrop-filter: blur(100px); */
+  /* background-color: black; */
+
+  background-blend-mode: lighten;
+  padding: 1.5rem 4rem;
+  border-bottom: 10px solid var(--grey);
+}
+
+.signin {
+  height: 80vh;
+  width: 38%;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: relative;
+  top: 0px;
+  margin: 0rem auto;
+  padding: 4rem 4rem 5rem;
+  display: grid;
+}
+.signin form {
+  display: grid;
+  gap: 1rem;
+}
+.signin form h3 {
+  font-size: 2.5rem;
+}
+.signin form input {
+  padding: 0.9rem 1.5rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: var(--black);
+}
+.signin form button {
+  background-color: var(--red);
+  border: none;
+  padding: 0.9rem 1.5rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.needHelpRememberMe {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-top: -0.7rem;
+}
+.needHelpRememberMe span input,
+label,
+a {
+  color: var(--grey);
+}
+input[type="checked"]:checked {
+  background-color: var(--grey);
+  color: var(--grey);
+}
+.new {
+  color: var(--grey);
+  margin: 3.5rem 0rem 1.5rem;
+  font-size: 1rem;
+}
+.new a {
+  color: var(--white);
+}
+.captcha {
+  font-size: 0.8rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+nav img {
+  width: 40px;
+  height: 40px;
+}
+nav a {
+  background-color: var(--red);
+  color: #fff;
+  padding: 0rem 1.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}

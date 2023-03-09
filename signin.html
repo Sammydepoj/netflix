@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/signin.css" />
+    <title>Netflix</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <header>
+      <nav>
+        <img src="./images/logo.png" alt="logo for page" />
+      </nav>
+      <div class="signin">
+        <form action="#">
+          <h3>Sign In</h3>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email or Phone number"
+            aria-label="email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            aria-label="password"
+            required
+            minlength="6"
+            maxlength="10"
+          />
+          <button type="submit">Sign In</button>
+          <div class="needHelpRememberMe">
+            <span>
+              <label for="remember_me">Remember Me</label>
+              <input
+                type="checkbox"
+                name="remember-me"
+                id="remember_me"
+                aria-label="remember-me"
+                required
+              />
+            </span>
+
+            <a href="#">Need help?</a>
+          </div>
+        </form>
+
+        <p class="new">New to Netflix ? <a href="#">Sign up now</a></p>
+        <p class="captcha">
+          This page is protected by Google reCAPTCHA to ensure you're not a bot.
+          Learn more.
+        </p>
+      </div>
+    </header>
+    <main></main>
+    <footer>
+      <p>Questions? Contact us.</p>
+    </footer>
+  </body>
+</html>
