@@ -24,9 +24,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat no-repeat;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
-
   background-blend-mode: overlay;
   padding: 0rem 2rem;
   border-bottom: 10px solid var(--grey);
@@ -126,6 +124,12 @@ section div p {
   font-size: 1.8rem;
   margin-top: 2rem;
 }
+.sectionImage{
+  width: 50%;
+}
+.sectionImage img{
+width: 100%;
+}
 #section3 .sectionDetails h3 {
   width: 50%;
 }
@@ -204,4 +208,22 @@ footer {
 .footerLinks ul a li {
   text-align: left;
   font-size: 1rem;
+}
+@media only screen and (max-width: 1000px) {
+  header {
+    padding: 0rem 1rem;
+  }
+  nav img {
+    width: 13rem;
+  }
+  .heroContent {
+  display: grid;
+  place-items: center;
+  width: 55%;
+  margin-top: 1rem;
+  /* border: 1px solid red; */
+}
+  .footerLinks ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
